@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "equinox"
+version = "0.1.0"
+description = "This is a vulnerability scanner for SQLi, XSS, CSRF and many more"
+authors = ["sshaparenko <zshaparenkoz@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+equinox = "equinox:cli" #entry point
