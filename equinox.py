@@ -97,6 +97,9 @@ def check_sqli_verbose(wordlist_path: str, url: str) -> None:
 
 def buildInjection(url: str, inj: str) -> str:
     chunks = url.split("=")
+    if len(chunks) == 1:
+        raise IndexError
+
     return f"{chunks[0]}={inj}"
 
 
